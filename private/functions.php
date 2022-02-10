@@ -33,5 +33,13 @@
         header("Location: " . $location);
         exit; // quit php, only send header and browder will make new request for index.php
     }
+
+    function is_post_request() {
+        return $_SERVER['REQUEST_METHOD'] == 'POST';
+    }
+
+    function is_get_request() {
+        return $_SERVER['REQUEST_METHOD'] == 'GET';
+    }
     
 ?>
